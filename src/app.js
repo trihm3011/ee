@@ -3,7 +3,7 @@ import express from 'express';
 const app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World, ES6!')
+  res.send('Hello World, port 3000!')
 });
 
 app.listen(3000, function () {

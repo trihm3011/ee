@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "yarn run package-transpile && yarn run serve",
-    "serve": "node src/app.js",
+    "babel-node": "babel-node --presets=env",
+    "start": "nodemon --exec npm run babel-node -- ./src/app.js",
     "prepackage-transpile": "rimraf src",
     "package-transpile": "babel 'src-es6' --out-dir 'src' --copy-files"
   },
@@ -19,6 +19,7 @@
     "express": "^4.15.4"
   },
   "devDependencies": {
+    "nodemon": "^1.12.0",
     "rimraf": "^2.6.1"
   }
 }
