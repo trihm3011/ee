@@ -1,0 +1,24 @@
+{
+  "name": "ee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "yarn run package-transpile && yarn run serve",
+    "serve": "node src/app.js",
+    "prepackage-transpile": "rimraf src",
+    "package-transpile": "babel 'src-es6' --out-dir 'src' --copy-files"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "elasticsearch": "^13.3.1",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1"
+  }
+}
